@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Opening Barber</title>
+<style>
+    body, html { margin: 0; padding: 0; font-family: 'Arial', sans-serif; height: 100%; }
+    body { display: flex; justify-content: center; align-items: center; background: #000; color: #fff; overflow: hidden; }
+
+    /* Halaman Awal */
+    #welcomePage {
+        position: absolute; width: 100%; height: 100%; background: url('0e9bb592-88a4-4aa1-8963-63005abc3d8a.png') no-repeat center center/cover;
+        display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    }
+    #guestList { margin-bottom: 20px; }
+    #guestList select {
+        padding: 10px 15px; border-radius: 8px; border: none; font-size: 16px;
+    }
+    #openBtn {
+        background: #ff6600; color: #fff; border: none; padding: 12px 25px; border-radius: 10px; font-size: 16px;
+        cursor: pointer; transition: 0.3s;
+    }
+    #openBtn:hover { background: #e65c00; }
+
+    /* Halaman Undangan */
+    #invitationPage {
+        display: none; width: 100%; height: 100%; background: url('0e9bb592-88a4-4aa1-8963-63005abc3d8a.png') no-repeat center center/cover;
+        display: flex; justify-content: center; align-items: center; text-align: center; flex-direction: column;
+        animation: fadeIn 1s ease-in-out;
+    }
+    #invitationPage h1 { font-size: 3em; color: #ff6600; margin-bottom: 10px; }
+    #invitationPage h2 { font-size: 1.5em; margin-bottom: 15px; color: #fff; }
+    #invitationPage p { font-size: 1.1em; color: #ccc; margin-bottom: 10px; }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95);}
+        to { opacity: 1; transform: scale(1);}
+    }
+</style>
+</head>
+<body>
+
+<!-- Halaman Awal -->
+<div id="welcomePage">
+    <h1>Grand Opening Barber</h1>
+    <div id="guestList">
+        <select id="guestSelect">
+            <option value="" disabled selected>Pilih Nama Anda</option>
+            <option value="John Doe">John Doe</option>
+            <option value="Jane Smith">Jane Smith</option>
+            <option value="Michael Johnson">Michael Johnson</option>
+            <!-- Tambahkan nama lainnya di sini -->
+        </select>
+    </div>
+    <button id="openBtn" onclick="enterInvitation()">Buka Undangan</button>
+</div>
+
+<!-- Halaman Undangan -->
+<div id="invitationPage">
+    <h1>Welcome, <span id="guestName"></span>!</h1>
+    <h2>Barbershop Exclusive Style</h2>
+    <p>We are excited to invite you to our Grand Opening.</p>
+    <p>📍 Location: 123 Barber Street, City Name</p>
+    <p>🕒 Date & Time: 10 September 2025, 10:00 AM - 5:00 PM</p>
+</div>
+
+<script>
+function enterInvitation() {
+    const select = document.getElementById('guestSelect');
+    const name = select.value;
+    if (!name) {
+        alert('Please select your name first!');
+        return;
+    }
+    document.getElementById('guestName').innerText = name;
+    document.getElementById('welcomePage').style.display = 'none';
+    document.getElementById('invitationPage').style.display = 'flex';
+}
+</script>
+
+</body>
+</html>

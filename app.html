@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Opening Barbershop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .opening {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      text-align: center;
+      color: white;
+    }
+    .opening h1 {
+      font-size: 3em;
+      margin: 0;
+      animation: fadeInDown 2s;
+    }
+    .opening p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      animation: fadeInUp 2s;
+    }
+
+    #guest-name {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .btn {
+    background-color: #ac8a47;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background-color: #513a0c;
+
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .invitation {
+      display: none;
+      padding: 50px;
+      text-align: center;
+      background: white;
+    }
+    .invitation h2 {
+      font-size: 4em;
+      color: #2c3e50;
+    
+    }
+    .invitation p {
+      font-size: 4em;
+      color: #555;
+    }
+    .invitation button {
+      margin-top: 200px;
+      padding: 10px 20px;
+      background: #27ae60;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .invitation button:hover {
+      background: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+
+<div class="opening">
+  <div class="logo"></div>
+  <h1 style="font-size: 2.8em; color: #c8aa6e;">FAI BARBERSHOP PEKANBARU <br></h1>
+  <h1>You're Invited to Our Grand Opening <br></h1>
+  <h2 style="color: #D3D3D3">Kepada Yth.<br>Bapak/Ibu/Saudara/i</h2>
+  <div id="guest-name">Huri dan partner</div>
+<button onclick="window.location.href='index.html';" style="margin-top: 30px; width: 300px; height: 50px;" class="btn">
+    Buka Undangan
+</button>
+
+</div>
+  <script>
+    function openInvitation() {
+      document.getElementById('opening').style.display = 'none';
+      document.getElementById('invitation').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

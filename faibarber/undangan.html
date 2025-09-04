@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Opening Barber</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #171414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .invitation {
+    background: rgb(48, 48, 48);
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 400px;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background: url('file-1epknrNJ9oAUBjazGz29rS') no-repeat center/contain;
+  }
+  h1 {
+    color: #222;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  #guest-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+  }
+  .btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background-color: #c9302c;
+  }
+</style>
+</head>
+<body>
+
+<div class="invitation">
+  <div class="logo"></div>
+  <h1>You're Invited to Our Grand Opening</h1>
+  <p>Kepada Yth.<br>Bapak/Ibu/Saudara/i</p>
+  <div id="guest-name">Huri dan partner</div>
+  <button class="btn" onclick="openInvitation()">Buka Undangan</button>
+</div>
+
+<script>
+  function openInvitation() {
+    alert("Selamat datang di Grand Opening Barber Huri! 🎉✂️");
+    // Bisa diganti dengan redirect ke halaman undangan penuh
+    // window.location.href = "undangan.html";
+  }
+</script>
+
+</body>
+</html>
